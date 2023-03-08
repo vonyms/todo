@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="dist/output.css">
+    <script src="src/tailwind.js"></script> -->
+    <style>
+        .deleteIcon {
+            padding: 2px 5px;
+            background-color: red;
+            color: #fff;
+            cursor: pointer;
+        }
+        .checked {
+            text-decoration: line-through;
+            opacity: .5;
+        }
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+        .closedTache {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Nouveau tâche</h2>
+    <input type="text" id="inputTache" value="Menage " placeholder="Saisissez une tâche">
+    <button id="btnAddTache">+</button>
+
+    <h2>Liste des tâches</h2>
+    
+    <div class="blockTache">
+        <ul class="listTache"></ul> 
+    </div>
+
+    <div class="blockFinishedTask hide">
+        <p>Voici les tâches terminées</p>
+        <ul class="closedTache"></ul>
+    </div>
+    
+    
+    <div class="blockOption">
+        <button id="option">Option</button>
+        <div class="blockSubOption">
+            <ul>
+                <li>
+                    <input type="checkbox" name="hideElt" id="hideElt">
+                    <label for="hideElt"> Cacher les tâches terminés</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="deleteAll" id="deleteAll">
+                    <label for="deleteAll">Tout supprimer</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="seeFinishedTask" id="seeFinishedTask">
+                    <label for="seeFinishedTask">Voir les tâches terminées</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
