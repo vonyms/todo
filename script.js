@@ -12,7 +12,6 @@ window.onload = function () {
     let checkedTask = document.querySelectorAll('ul.listTache li.checked');
     
     addTacheFunction = () => {
-        for (let i = 0; i < 10; i++) {
             if(inputTache.value === '')  return false;
          
             let li = document.createElement("li");
@@ -28,8 +27,7 @@ window.onload = function () {
             li.appendChild(spanDelete);
         
             listTache.appendChild(li);
-            inputTache.value = 'Menage '+i;
-        }
+            inputTache.value = '';
         
     };
     addTache.addEventListener('click', addTacheFunction);
