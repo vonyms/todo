@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="dist/output.css">
-    <script src="src/tailwind.js"></script> -->
-    <style>
-        .deleteIcon {
-            padding: 2px 5px;
-            background-color: red;
-            color: #fff;
-            cursor: pointer;
-        }
-        .checked {
-            text-decoration: line-through;
-            opacity: .5;
-        }
-        .hide {
-            display: none;
-        }
-        .show {
-            display: block;
-        }
-        .closedTache {
-            pointer-events: none;
-        }
-    </style>
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <h2>Nouveau tâche</h2>
-    <input type="text" id="inputTache" value="Menage " placeholder="Saisissez une tâche">
-    <button id="btnAddTache">+</button>
+    <main>
+        <div class="block-main text-md flex">
+            <div class="block-main_item flex-1">
+                <div class="block-main__item flex justify-center items-center">
+                    <div class="block-form px-2 py-10 bg-white px-8 py-10 shadow-lg rounded-sm">
+                        <h1 class="uppercase font-bold text-lg text-center pb-4">To do</h1>
+                        
+                        <input type="text" id="inputTache" value="" placeholder="Saisissez une tâche" class="border-solid border-2 shadow-sm rounded-sm px-3 py-2">
+                        <button id="btnAddTache" class="bg-blue-600 px-3 py-2 rounded-sm text-gray-900 bg-gradient-to-r from-red-200 to-yellow-200 hover:bg-gradient-to-bl font-medium text-sm text-center mr-2 mb-2">Ajouter</button>
 
-    <h2>Liste des tâches</h2>
-    
-    <div class="blockTache">
-        <ul class="listTache"></ul> 
-    </div>
+                        <div class="blockTache border-2 border-solid">
+                            <ul class="listTache list-disc px-3 py-2 text-gray-900 capitalize"></ul>
+                        </div>
 
-    <div class="blockFinishedTask hide">
-        <p>Voici les tâches terminées</p>
-        <ul class="closedTache"></ul>
-    </div>
-    
-    
-    <div class="blockOption">
-        <button id="option">Option</button>
-        <div class="blockSubOption">
-            <ul>
-                <li>
-                    <input type="checkbox" name="hideElt" id="hideElt">
-                    <label for="hideElt"> Cacher les tâches terminés</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="deleteAll" id="deleteAll">
-                    <label for="deleteAll">Tout supprimer</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="seeFinishedTask" id="seeFinishedTask">
-                    <label for="seeFinishedTask">Voir les tâches terminées</label>
-                </li>
-            </ul>
+                        <div class="blockFinishedTask hide pt-10 px-2 py-10 px-8 py-10 shadow-lg rounded-sm bg-blue-400">
+                            <h2 class="uppercase font-bold text-lg text-center pb-4">Voici les tâches terminées</h2>
+                            <ul class="closedTache"></ul>
+                        </div>
+
+                        <div class="blockOption text-sm text-gray-400 pl-20 pt-10">
+                            <button id="option" class="hiddenOption">Option:</button>
+                            <div class="blockSubOption pl-10">
+                                <ul class="block-option">
+                                    <li class="hiddenOption">
+                                        <input type="checkbox" name="hideElt" id="hideElt">
+                                        <label for="hideElt"> Cacher les tâches terminés</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="deleteAll" id="deleteAll">
+                                        <label for="deleteAll">Tout supprimer</label>
+                                    </li>
+                                    <li class="hiddenOption">
+                                        <input type="checkbox" name="seeFinishedTask" id="seeFinishedTask">
+                                        <label for="seeFinishedTask">Voir les tâches terminées</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-main_item flex-1">
+                <div class="block-main__item flex justify-center items-center">
+                    <picture>
+                        <img src="./src/img/create.png" alt="">
+                    </picture>
+                </div>
+            </div>
         </div>
-    </div>
+
+    </main>
+
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,86 @@
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #2e2a76 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #2e2a76;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hiddenOption {
+  display: none !important;
+}
+
+::-moz-placeholder {
+  font-style: italic;
+}
+
+::placeholder {
+  font-style: italic;
+}
+
+@media screen and (max-width: 1024px) {
+  .block-main {
+    flex-direction: column;
+  }
+}
+.block-main_item:first-child {
+  background-color: #2e2a76;
+}
+.block-main__item {
+  height: 100vh;
+}
+.block-main__item .blockTache {
+  height: 174px;
+  overflow: auto;
+}
+.block-main__item li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.13);
+  padding: 5px 10px;
+}
+.block-main__item li .deleteIcon {
+  padding: 2px 10px;
+  background-color: #c42c18;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.block-main__item .block-option li {
+  justify-content: initial;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.block-main__item .closedTache {
+  pointer-events: none;
+}
+.block-main__item .block-form {
+  min-height: 50vh;
+}/*# sourceMappingURL=style.css.map */

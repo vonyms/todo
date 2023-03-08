@@ -12,22 +12,23 @@ window.onload = function () {
     let checkedTask = document.querySelectorAll('ul.listTache li.checked');
     
     addTacheFunction = () => {
-            if(inputTache.value === '')  return false;
-         
-            let li = document.createElement("li");
         
-            let spanTitle = document.createElement("span");
-            spanTitle.classList.add('title');
-            spanTitle.textContent = inputTache.value;
-            li.appendChild(spanTitle);
+        if(inputTache.value === '')  return false;
         
-            let spanDelete = document.createElement("span");
-            spanDelete.classList.add('deleteIcon');
-            spanDelete.textContent = 'x';
-            li.appendChild(spanDelete);
-        
-            listTache.appendChild(li);
-            inputTache.value = '';
+        let li = document.createElement("li");
+    
+        let spanTitle = document.createElement("span");
+        spanTitle.classList.add('title');
+        spanTitle.textContent = inputTache.value;
+        li.appendChild(spanTitle);
+    
+        let spanDelete = document.createElement("span");
+        spanDelete.classList.add('deleteIcon');
+        spanDelete.textContent = 'x';
+        li.appendChild(spanDelete);
+    
+        listTache.appendChild(li);
+        inputTache.value = '';
         
     };
     addTache.addEventListener('click', addTacheFunction);

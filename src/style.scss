@@ -1,0 +1,93 @@
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #2e2a76 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #2e2a76;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+.checked {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.hiddenOption {
+    display: none !important;
+}
+
+::placeholder {
+    font-style: italic;
+}
+
+.block-main {
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
+
+    &_item {
+        &:first-child {
+            background-color: #2e2a76;
+        }
+    }
+
+    &__item {
+        height: 100vh;
+
+        .blockTache {
+            height: 174px;
+            overflow: auto;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid rgba(128, 128, 128, 0.13);
+            padding: 5px 10px;
+
+            .deleteIcon {
+                padding: 2px 10px;
+                background-color: #c42c18;
+                color: #fff;
+                cursor: pointer;
+                border-radius: 2px;
+            }
+        }
+
+        .block-option {
+            li {
+                justify-content: initial;
+                column-gap: 10px;
+            }
+        }
+
+        .closedTache {
+            pointer-events: none;
+        }
+
+        .block-form {
+            min-height: 50vh;
+        }
+    }
+}
