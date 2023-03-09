@@ -18,9 +18,16 @@
                     <div class="block-form px-2 py-10 bg-white px-8 py-10 shadow-lg rounded-sm">
                         <h1 class="uppercase font-bold text-lg text-center pb-4">To do</h1>
                         
-                        <input type="text" id="inputTache" value="" placeholder="Saisissez une tâche" class="border-solid border-2 shadow-sm rounded-sm px-3 py-2">
-                        <button id="btnAddTache" class="bg-blue-600 px-3 py-2 rounded-sm text-gray-900 bg-gradient-to-r from-red-200 to-yellow-200 hover:bg-gradient-to-bl font-medium text-sm text-center mr-2 mb-2">Ajouter</button>
-
+                        <div class="relative mb-10">
+                            <div class="flex">
+                                 <input type="text" id="inputTache" value="" placeholder="Saisissez une tâche" class="border-solid border-2 shadow-sm rounded-sm px-3 py-2 w-80">
+                                 <button id="btnAddTache" class="bg-blue-600 px-5 py-5 rounded-sm text-gray-900 bg-gradient-to-r from-red-200 to-yellow-200 hover:bg-gradient-to-bl font-medium text-md text-center ml-2">Ajouter</button>
+                            </div>
+                           
+                            <div class="error hide">Remplisser le champs</div>   
+                        </div>
+                        
+                        
                         <div class="blockTache border-2 border-solid">
                             <ul class="listTache list-disc px-3 py-2 text-gray-900 capitalize"></ul>
                         </div>

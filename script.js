@@ -10,27 +10,38 @@ window.onload = function () {
     const seeFinishedTask = document.getElementById('seeFinishedTask');
     const blockFinishedTask = document.querySelector('.blockFinishedTask');
     let checkedTask = document.querySelectorAll('ul.listTache li.checked');
-    
+    const errorMsg = document.querySelector('.error');
+    // let arrayListTask = [];
+
     addTacheFunction = () => {
         
-        if(inputTache.value === '')  return false;
+        if(inputTache.value === '') {
+            errorMsg.classList.remove('hide');
+            return false;    
+        } else {
+            // arrayListTask.push(inputTache.value);
+            errorMsg.classList.add('hide');
+
+            let li = document.createElement("li");
         
-        let li = document.createElement("li");
-    
-        let spanTitle = document.createElement("span");
-        spanTitle.classList.add('title');
-        spanTitle.textContent = inputTache.value;
-        li.appendChild(spanTitle);
-    
-        let spanDelete = document.createElement("span");
-        spanDelete.classList.add('deleteIcon');
-        spanDelete.textContent = 'x';
-        li.appendChild(spanDelete);
-    
-        listTache.appendChild(li);
-        inputTache.value = '';
+            let spanTitle = document.createElement("span");
+            spanTitle.classList.add('title');
+            spanTitle.textContent = inputTache.value;
+            li.appendChild(spanTitle);
+        
+            let spanDelete = document.createElement("span");
+            spanDelete.classList.add('deleteIcon');
+            spanDelete.textContent = 'x';
+            li.appendChild(spanDelete);
+        
+            listTache.appendChild(li);
+            inputTache.value = '';
+        }
+        
         
     };
+    
+
     addTache.addEventListener('click', addTacheFunction);
         
     document.addEventListener('click', function(e) {
